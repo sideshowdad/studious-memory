@@ -1,0 +1,34 @@
+# "release/": mavenBuild() -> publishJunitResult() -> deployApplication(SYS) -> sonarScan() 
+#       -> newmanRegressionTest(SYS) -> codeScan() -> publishArtifacts()
+##FEATURE BRANCH
+feature:
+  helloWorld:
+    message: 'FEATURE BRANCH'
+    agent: 'main-agent'
+  mavenBuild:
+     jdk: 'jdk8'
+     command: 'mvn clean install -s settings.xml'
+  sonarScan:
+    ignore: "YES"
+  notification:
+    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
+##DEVELOP BRANCH
+develop:
+  helloWorld:
+    message: 'DEVELOP BRANCH'
+    agent: 'main-agent'
+  mavenBuild:
+    jdk: 'jdk8'
+    command: 'mvn clean install -s settings.xml'
+  notification:
+    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
+##RELEASE
+release:
+  helloWorld:
+    message: 'Release BRANCH'
+    agent: 'main-agent'
+  mavenBuild:
+    jdk: 'jdk8'
+    command: 'mvn clean install -s settings.xml'
+  notification:
+    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
