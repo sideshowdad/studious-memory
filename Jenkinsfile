@@ -13,6 +13,10 @@ node('agent') {
     checkout scm
     def scmUrl = scm.getUserRemoteConfigs()[0].getUrl()
     env.scmUrl=scmUrl
+}
+
+if (env.BRANCH_NAME == 'feature') {
+        config = loadBranchConfiguration("${workspace}/jenkinsConfig.yaml", 'feature')
     
 echo "Hello World my first Jenkins File"
 }    
