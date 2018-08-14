@@ -10,6 +10,3 @@ master:
      command: 'mvn clean install -s settings.xml'
   sonarScan:
     ignore: "YES"
-  notification:
-    emailList: "kevin.gouveia@td.com"
-
