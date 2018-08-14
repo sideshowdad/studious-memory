@@ -1,10 +1,10 @@
 # "release/": mavenBuild() -> publishJunitResult() -> deployApplication(SYS) -> sonarScan() 
 #       -> newmanRegressionTest(SYS) -> codeScan() -> publishArtifacts()
-##FEATURE BRANCH
-feature:
+##Master BRANCH
+master:
   helloWorld:
-    message: 'FEATURE BRANCH'
-    agent: 'main-agent'
+    message: 'MASTER BRANCH'
+    agent: 'node'
   mavenBuild:
      jdk: 'jdk8'
      command: 'mvn clean install -s settings.xml'
@@ -12,23 +12,4 @@ feature:
     ignore: "YES"
   notification:
     emailList: "kevin.gouveia@td.com"
-##DEVELOP BRANCH
-develop:
-  helloWorld:
-    message: 'DEVELOP BRANCH'
-    agent: 'main-agent'
-  mavenBuild:
-    jdk: 'jdk8'
-    command: 'mvn clean install -s settings.xml'
-  notification:
-    emailList: "kevin.gouveia@td.com"
-##RELEASE
-release:
-  helloWorld:
-    message: 'Release BRANCH'
-    agent: 'main-agent'
-  mavenBuild:
-    jdk: 'jdk8'
-    command: 'mvn clean install -s settings.xml'
-  notification:
-    emailList: "kevin.gouveia@td.com"
+
