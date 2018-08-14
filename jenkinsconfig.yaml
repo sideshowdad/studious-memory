@@ -1,0 +1,12 @@
+# "release/": mavenBuild() -> publishJunitResult() -> deployApplication(SYS) -> sonarScan() 
+#       -> newmanRegressionTest(SYS) -> codeScan() -> publishArtifacts()
+##Master BRANCH
+master:
+  helloWorld:
+    message: 'MASTER BRANCH'
+    agent: 'node'
+  mavenBuild:
+     jdk: 'jdk8'
+     command: 'mvn clean install -s settings.xml'
+  sonarScan:
+    ignore: "YES"
