@@ -11,7 +11,7 @@ feature:
   sonarScan:
     ignore: "YES"
   notification:
-    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
+    emailList: "kevin.gouveia@td.com"
 ##DEVELOP BRANCH
 develop:
   helloWorld:
@@ -21,7 +21,7 @@ develop:
     jdk: 'jdk8'
     command: 'mvn clean install -s settings.xml'
   notification:
-    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
+    emailList: "kevin.gouveia@td.com"
 ##RELEASE
 release:
   helloWorld:
@@ -31,4 +31,4 @@ release:
     jdk: 'jdk8'
     command: 'mvn clean install -s settings.xml'
   notification:
-    emailList: "alvin.murugananthan@td.com,Emma.Pan@td.com,alex.ma@td.com"
+    emailList: "kevin.gouveia@td.com"
