@@ -13,3 +13,6 @@ node('agent') {
     checkout scm
     def scmUrl = scm.getUserRemoteConfigs()[0].getUrl()
     env.scmUrl=scmUrl
+    
+echo "Hello World my first Jenkins File"
+    
