@@ -1,9 +1,9 @@
 # "release/": mavenBuild() -> publishJunitResult() -> deployApplication(SYS) -> sonarScan() 
 #       -> newmanRegressionTest(SYS) -> codeScan() -> publishArtifacts()
-##Master BRANCH
-master:
+##Feature BRANCH
+feature:
   helloWorld:
-    message: 'MASTER BRANCH'
+    message: 'FEATURE BRANCH'
     agent: 'node'
   mavenBuild:
      jdk: 'jdk8'
